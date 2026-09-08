@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-repo_skills="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/claude/skills"
+repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+repo_skills="$repo_root/claude/skills"
 target_root="$HOME/.claude/skills"
 mkdir -p "$target_root"
 
@@ -15,3 +16,10 @@ for d in "$repo_skills"/*/; do
     echo "linked: $name"
   fi
 done
+
+while IFS= read -r line; do
+  line="$(echo "$line" | sed 's/#.*//' | xargs)"
+  [ -z "$line" ] && continue
+  echo "claude $line"
+  claude $line || echo "  (skipped: exit $?)"
+done < "$repo_root/claude/plugins.txt"

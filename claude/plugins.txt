@@ -1,0 +1,8 @@
+# Marketplaces
+plugin marketplace add anthropics/claude-plugins-official
+plugin marketplace add DietrichGebert/ponytail
+plugin marketplace add https://sentinela.livemode.space/plugins/marketplace.json
+
+# Plugins
+plugin install ponytail@ponytail --scope user
+plugin install sentinela@livemode --scope user

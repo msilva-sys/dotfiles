@@ -11,3 +11,11 @@ Get-ChildItem $repoSkills -Directory | ForEach-Object {
         Write-Host "linked: $($_.Name)"
     }
 }
+
+$pluginsFile = Join-Path $PSScriptRoot "claude\plugins.txt"
+Get-Content $pluginsFile | ForEach-Object {
+    $line = $_.Trim()
+    if ($line -eq "" -or $line.StartsWith("#")) { return }
+    Write-Host "claude $line"
+    cmd /c "claude $line"
+}
