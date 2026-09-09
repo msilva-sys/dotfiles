@@ -23,3 +23,16 @@ while IFS= read -r line; do
   echo "claude $line"
   claude $line || echo "  (skipped: exit $?)"
 done < "$repo_root/claude/plugins.txt"
+
+# ponytail statusline badge
+settings="$HOME/.claude/settings.json"
+statusline_glob="$HOME/.claude/plugins/cache/ponytail/ponytail/*/hooks/ponytail-statusline.sh"
+if ls -d $statusline_glob >/dev/null 2>&1; then
+  [ -f "$settings" ] || echo '{}' > "$settings"
+  tmp="$(mktemp)"
+  jq --arg cmd 'bash $(ls -d $HOME/.claude/plugins/cache/ponytail/ponytail/*/hooks/ponytail-statusline.sh | sort -V | tail -1)' \
+    '.statusLine = {type: "command", command: $cmd}' "$settings" > "$tmp" && mv "$tmp" "$settings"
+  echo "statusline: ponytail"
+else
+  echo "statusline: skip (ponytail not installed)"
+fi
