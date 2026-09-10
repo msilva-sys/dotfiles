@@ -17,6 +17,17 @@ cmd /c mklink /J "C:\Users\msilva\.claude\skills\<nome>" "C:\Users\msilva\projec
 - `finish-day` — comita e dá push nos repos trabalhados no dia, com confirmação.
 - `start-day` — panorama do dia (agenda, Linear, Slack, e-mail, wiki, repos pendentes).
 
+## nvim/
+
+Config do Neovim (lazy.nvim + `lua/euliveiras/`). É ligada na pasta que o
+Neovim lê de fato por uma junction NTFS:
+
+```powershell
+cmd /c mklink /J "C:\Users\msilva\AppData\Local\nvim" "C:\Users\msilva\projects\dotfiles\nvim"
+```
+
+No Linux/macOS o equivalente é um symlink em `~/.config/nvim`.
+
 ## claude/plugins.txt
 
 Lista, um comando por linha, dos marketplaces e plugins instalados (sem o
@@ -28,9 +39,9 @@ a mesma linha aqui, pra ficar reproduzível na próxima máquina.
 
 1. Clonar este repo (em qualquer pasta — os scripts se localizam sozinhos).
 2. Rodar o script do seu OS:
-   - Liga toda pasta em `claude/skills/` automaticamente (nada pra editar
-     quando uma skill nova entrar) — idempotente, rodar de novo só pula o
-     que já está ligado.
+   - Liga toda pasta em `claude/skills/` e `nvim/` automaticamente (nada pra
+     editar quando uma skill nova entrar) — idempotente, rodar de novo só
+     pula o que já está ligado.
    - Roda cada linha de `claude/plugins.txt` via `claude ...` — se o
      marketplace/plugin já existir, o próprio `claude` avisa e o script
      segue (não trava o resto).

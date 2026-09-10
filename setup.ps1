@@ -12,6 +12,14 @@ Get-ChildItem $repoSkills -Directory | ForEach-Object {
     }
 }
 
+$nvimTarget = Join-Path $env:LOCALAPPDATA "nvim"
+if (Test-Path $nvimTarget) {
+    Write-Host "skip (already exists): nvim"
+} else {
+    cmd /c mklink /J "$nvimTarget" "$(Join-Path $PSScriptRoot 'nvim')" | Out-Null
+    Write-Host "linked: nvim"
+}
+
 $pluginsFile = Join-Path $PSScriptRoot "claude\plugins.txt"
 Get-Content $pluginsFile | ForEach-Object {
     $line = $_.Trim()

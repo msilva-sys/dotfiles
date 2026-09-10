@@ -17,6 +17,15 @@ for d in "$repo_skills"/*/; do
   fi
 done
 
+nvim_target="${XDG_CONFIG_HOME:-$HOME/.config}/nvim"
+mkdir -p "$(dirname "$nvim_target")"
+if [ -e "$nvim_target" ]; then
+  echo "skip (already exists): nvim"
+else
+  ln -s "$repo_root/nvim" "$nvim_target"
+  echo "linked: nvim"
+fi
+
 while IFS= read -r line; do
   line="$(echo "$line" | sed 's/#.*//' | xargs)"
   [ -z "$line" ] && continue
