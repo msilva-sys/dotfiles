@@ -7,16 +7,8 @@ Comando **read-only sobre a wiki** — nunca cria, edita nem apaga nenhuma
 página do vault. Roda do zero a cada chamada; não depende de estado de
 execuções anteriores.
 
-A saída é um **Artifact HTML**, não texto de chat. Carregue a skill
-`artifact-design` antes de escrever o HTML (obrigatório para qualquer
-artifact). Escreva o arquivo no diretório de scratchpad da sessão e publique
-com a ferramenta Artifact — sem `url` (cada dia é um artifact novo, não uma
-atualização do dia anterior). Sugestões:
-- `title`: algo como "Panorama 26/08" — inclua a data, já que cada execução
-  gera um artifact separado.
-- `favicon`: 🧭.
-- Depois de publicar, mande o link em 1 linha no chat — não repita o
-  conteúdo do panorama em texto corrido, o artifact já é a entrega.
+A saída é **markdown direto no chat** — nunca um Artifact. A mensagem em si
+é a entrega; não publique arquivo nem link.
 
 ## Data de hoje
 
