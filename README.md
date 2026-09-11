@@ -16,6 +16,7 @@ cmd /c mklink /J "C:\Users\msilva\.claude\skills\<nome>" "C:\Users\msilva\projec
 
 - `finish-day` — comita e dá push nos repos trabalhados no dia, com confirmação.
 - `start-day` — panorama do dia (agenda, Linear, Slack, e-mail, wiki, repos pendentes).
+- `team-comms` — revisa/redige mensagens pra colegas antes de enviar (Slack, Linear, GitHub).
 
 ## nvim/
 
