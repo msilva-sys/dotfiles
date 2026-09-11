@@ -52,6 +52,20 @@ comite nem dê push em nenhum repo antes dessa confirmação.
    automaticamente — pule o push e relate "sem upstream configurado".
 3. Nunca `--force`, nunca mexer em outro branch além do atual.
 
+## Passo 4 — nota para amanhã
+
+Pergunte a msilva, em texto livre: "Algo pra lembrar amanhã? (Enter pra
+pular)". Se ele responder algo, grave em
+`C:\Users\msilva\.claude\daily-notes.md`, sobrescrevendo conteúdo anterior:
+
+```
+## <data de hoje>
+<texto de msilva, verbatim>
+```
+
+Sem resposta (vazio) → não toque no arquivo. Não interprete, resuma nem
+traduza — grava exatamente o que ele escreveu.
+
 ## Relatório final
 
 Lista curta, um repo por linha: nome do repo, o que foi feito (commit+push /

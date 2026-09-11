@@ -62,6 +62,12 @@ msilva que dia é.
    **detectar e sinalizar** — nunca commite, dê push, nem stage nada; se
    quiser fechar, é o `/finish-day` que faz isso.
 
+7. **Nota do finish-day de ontem.** Leia
+   `C:\Users\msilva\.claude\daily-notes.md`. Se existir e tiver conteúdo,
+   mostre verbatim; depois **apague o conteúdo do arquivo** — leitura
+   única, não repete nos próximos `/start-day`. Arquivo ausente ou vazio →
+   não mencione.
+
 ## Como montar o panorama
 
 Direto, sem prosa — tabelas ou bullets de uma linha, não um parágrafo por
@@ -70,14 +76,16 @@ item (mesmo padrão de concisão usado em `meetings/` prep pages). Ordem:
 1. **🔴 Urgente/atrasado** — issues Linear atrasadas, convites/e-mails/Slack
    que já deveriam ter resposta. Se não houver nada, diga explicitamente
    "nada atrasado" em vez de omitir a seção.
-2. **📅 Agenda de hoje** — horário, assunto, prep faltando quando for o caso.
-3. **Linear** — vencendo hoje / em progresso relevante. É a fonte de verdade
+2. **📝 Nota de ontem** — conteúdo de `daily-notes.md`, se houver, verbatim.
+   Senão, omita a seção.
+3. **📅 Agenda de hoje** — horário, assunto, prep faltando quando for o caso.
+4. **Linear** — vencendo hoje / em progresso relevante. É a fonte de verdade
    para pendências de msilva, wiki incluída.
-4. **Slack** — menções/DMs que pedem resposta.
-5. **E-mail** — threads que pedem resposta.
-6. **Wiki** — prep de reunião faltando, syntheses abertas relacionadas ao
+5. **Slack** — menções/DMs que pedem resposta.
+6. **E-mail** — threads que pedem resposta.
+7. **Wiki** — prep de reunião faltando, syntheses abertas relacionadas ao
    dia, compromissos de terceiros ainda sem retorno.
-7. **Repos** — repos com mudança pendente ou commit não pushado; sugira
+8. **Repos** — repos com mudança pendente ou commit não pushado; sugira
    `/finish-day` se houver algum.
 
 Se alguma fonte não pôde ser checada (sem acesso, erro, escopo insuficiente),
