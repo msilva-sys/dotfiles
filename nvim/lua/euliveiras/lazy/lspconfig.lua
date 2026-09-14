@@ -19,34 +19,26 @@ return {
 
     require("mason").setup()
 
-    local registry = require("mason-registry")
-    registry.refresh(function()
-      local ktlint = registry.get_package("ktlint")
-      if not ktlint:is_installed() then
-        ktlint:install()
-      end
-    end)
-
     require("mason-lspconfig").setup({
       ensure_installed = {
-        "kotlin_language_server",
         "ts_ls",
         "gopls",
+        "pyright",
       },
     })
 
-    vim.lsp.config("kotlin_language_server", {
-      capabilities = capabilities,
-    })
     vim.lsp.config("ts_ls", {
       capabilities = capabilities,
     })
     vim.lsp.config("gopls", {
       capabilities = capabilities,
     })
-    vim.lsp.enable("kotlin_language_server")
+    vim.lsp.config("pyright", {
+      capabilities = capabilities,
+    })
     vim.lsp.enable("ts_ls")
     vim.lsp.enable("gopls")
+    vim.lsp.enable("pyright")
 
     local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
