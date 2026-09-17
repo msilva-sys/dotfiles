@@ -15,6 +15,21 @@ antes de qualquer `send_message` / `save_comment` / `gh pr comment`.
 2. Leia o histórico relevante (thread, issue, PR) antes de redigir — a
    mensagem deve responder ao que já foi dito, não flutuar solta.
 
+## Regra geral: corta fluff
+
+Aplica em todo canal, além das regras específicas abaixo.
+
+- Sem preâmbulo ("espero que esteja bem", "só passando aqui pra..."), vai
+  direto ao ponto.
+- Sem repetir o mesmo fato duas vezes (ex.: contexto no início + resumo no
+  fim dizendo a mesma coisa).
+- Sem meta-narração sobre o processo ("revisei e percebi que...", "depois
+  de pensar bastante...") — só o conteúdo que importa pro destinatário.
+- Uma ideia por frase, frase curta. Corta advérbio/qualificador que não
+  muda o sentido ("bem simples", "só uma pequena dúvida").
+- Pedido vem explícito e cedo (o que precisa da pessoa), não enterrado no
+  fim de um parágrafo.
+
 ## Regras por canal
 
 ### Slack
