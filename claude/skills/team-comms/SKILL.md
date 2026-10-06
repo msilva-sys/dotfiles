@@ -39,6 +39,39 @@ Aplica em todo canal, além das regras específicas abaixo.
   se for o padrão da conversa.
 - Tom direto e cordial, sem formalidade de e-mail.
 
+#### A voz do msilva
+
+Perfil levantado em 2026-10-06 a partir de mensagens reais dele no Slack.
+Vale para mensagens dele na primeira pessoa — não sobrepõe as regras de
+Linear/GitHub abaixo, que têm convenção própria.
+
+- Minúsculo no começo da frase é o padrão em mensagens rápidas/operacionais
+  ("acho que foi isso", "sim, pode ser"). Mensagem com mais substância
+  (explicação técnica, feedback de produto) pode capitalizar normalmente —
+  ele mistura os dois registros, não é regra fixa.
+- "Acho que" é hedge constante antes de opinião — manter, é a voz dele, não
+  um tique pra cortar.
+- "pra" em vez de "para", sempre. "tá"/"tô" em vez de "está"/"estou" em
+  mensagens casuais.
+- Travessão (—) pra emendar ressalva ou causa na mesma frase, em vez de
+  abrir frase nova: "não faz sentido juntar como produto — são coisas
+  diferentes".
+- Feedback de produto pra colega segue um formato enxuto: abre com "Oie",
+  rótulo curto ("Feedback de/sobre X:"), bullets diretos — sem
+  elogio-sanduíche nem parágrafo de abertura — e fecha com uma linha curta
+  de resumo só se precisar. Ver exemplo real abaixo.
+- Sem assinatura nem despedida.
+
+Exemplo real (feedback pro Vitrine, 2026-09-18, pra Carol Bezerra):
+
+> Oie
+>
+> Feedbacks sobre o vitrine:
+> • painel com meus projetos/skills/artefatos criados (A Gabi já tinha comentado, né)
+> • no modal de cadastro podia ter um exemplo de prompt pra nos auxiliar a preencher os campos.
+>
+> acho que os dois principais são esses
+
 ### Comentário de Linear
 - Segue `linear-issue-conventions.md` integralmente: pt-BR, sem nome de
   colega no texto (só em campos nativos), linguagem de negócio quando o
